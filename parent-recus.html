@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>SCOLARPAY | Reçu de paiement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+<!-- HEADER -->
+<header class="bg-white shadow sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-lg md:text-xl font-bold text-green-600">SCOLARPAY</h1>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="parent-dashboard.html" class="hover:text-green-600">Tableau de bord</a>
+      <a href="parent-paiement.html" class="hover:text-green-600">Effectuer un paiement</a>
+      <a href="parent-recus.html" class="text-green-600 font-semibold">Reçus</a>
+      <a href="index.html" class="hover:text-green-600">Déconnexion</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 py-8 flex-grow">
+
+  <!-- REÇU -->
+  <section class="bg-white rounded-xl shadow p-6">
+    <h2 class="text-xl font-bold text-green-600 mb-4">Reçu de paiement</h2>
+
+    <div class="text-sm space-y-2">
+      <p><strong>Parent :</strong> Dupont</p>
+      <p><strong>Enfant :</strong> Jean Dupont</p>
+      <p><strong>Type de frais :</strong> Pension T1</p>
+      <p><strong>Montant :</strong> 50 000 FCFA</p>
+      <p><strong>Mode de paiement :</strong> MTN MoMo</p>
+      <p><strong>Date :</strong> 05 janvier 2026</p>
+      <p><strong>Statut :</strong> <span class="text-green-600 font-semibold">Payé</span></p>
+    </div>
+
+    <div class="mt-6 flex gap-4">
+      <button onclick="window.print()" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition">Imprimer</button>
+      <a href="#" class="bg-gray-200 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-300 transition">Télécharger PDF</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white shadow-inner py-4 text-center text-sm text-gray-500">
+  © 2026 SCOLARPAY – Tous droits réservés
+</footer>
+
+</body>
+</html>

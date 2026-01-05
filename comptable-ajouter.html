@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>SCOLARPAY | Ajouter un paiement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+<!-- HEADER -->
+<header class="bg-white shadow sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-lg md:text-xl font-bold text-green-600">SCOLARPAY</h1>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="comptable-dashboard.html" class="hover:text-green-600">Tableau de bord</a>
+      <a href="comptable-ajouter.html" class="text-green-600 font-semibold">Ajouter paiement</a>
+      <a href="comptable-recus.html" class="hover:text-green-600">Historique / Reçus</a>
+      <a href="index.html" class="hover:text-green-600">Déconnexion</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-8 flex-grow">
+
+  <section class="bg-white rounded-xl shadow p-6">
+    <h2 class="text-2xl font-bold text-green-600 mb-6">Ajouter un paiement</h2>
+
+    <form class="space-y-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Sélectionner l'élève</label>
+          <select class="w-full border rounded-lg p-3">
+            <option>Jean Dupont</option>
+            <option>Marie Dupont</option>
+            <option>Paul Martin</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Classe</label>
+          <input type="text" placeholder="Ex: 3e A" class="w-full border rounded-lg p-3" />
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Type de frais</label>
+        <select class="w-full border rounded-lg p-3">
+          <option>Inscription</option>
+          <option>Pension</option>
+          <option>Rattrapage de cours</option>
+          <option>Examen supplémentaire</option>
+          <option>Activités extra-scolaires</option>
+          <option>Voyage / Excursion</option>
+          <option>Matériel pédagogique</option>
+        </select>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Montant</label>
+          <input type="text" placeholder="Ex: 50 000 FCFA" class="w-full border rounded-lg p-3" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Mode de paiement</label>
+          <select class="w-full border rounded-lg p-3">
+            <option>MTN MoMo</option>
+            <option>Orange Money</option>
+            <option>Carte bancaire</option>
+            <option>Espèces</option>
+            <option>Virement bancaire</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Commentaires / Notes</label>
+        <textarea placeholder="Ex: paiement partiel, acompte, cours rattrapé, etc." class="w-full border rounded-lg p-3" rows="3"></textarea>
+      </div>
+
+      <div class="text-center">
+        <button type="button" class="bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-green-700 transition-all duration-200">Valider le paiement</button>
+      </div>
+    </form>
+
+  </section>
+
+</main>
+
+<footer class="bg-white shadow-inner py-4 text-center text-sm text-gray-500">
+  © 2026 SCOLARPAY – Tous droits réservés
+</footer>
+
+</body>
+</html>

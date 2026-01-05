@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>SCOLARPAY | Effectuer un paiement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+<!-- HEADER -->
+<header class="bg-white shadow sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-lg md:text-xl font-bold text-green-600">SCOLARPAY</h1>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="parent-dashboard.html" class="hover:text-green-600">Tableau de bord</a>
+      <a href="parent-paiement.html" class="text-green-600 font-semibold">Effectuer un paiement</a>
+      <a href="index.html" class="hover:text-green-600">Déconnexion</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 py-6 space-y-8">
+
+  <!-- SECTION ENFANTS ET SITUATION -->
+  <section class="bg-white rounded-xl shadow p-5">
+    <h2 class="font-semibold text-lg mb-4">Enfants</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+        <h3 class="font-semibold mb-1">Jean Dupont</h3>
+        <p class="text-sm">Classe : 3e A</p>
+        <p class="text-sm mt-2">Total à payer : <strong>150 000 FCFA</strong></p>
+        <p class="text-green-600">Payé : 75 000 FCFA</p>
+        <p class="text-red-600">Solde : 75 000 FCFA</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+        <h3 class="font-semibold mb-1">Marie Dupont</h3>
+        <p class="text-sm">Classe : 6e B</p>
+        <p class="text-sm mt-2">Total à payer : <strong>120 000 FCFA</strong></p>
+        <p class="text-green-600">Payé : 120 000 FCFA</p>
+        <p class="text-gray-500">Solde : 0 FCFA</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION PAIEMENT -->
+  <section class="bg-white rounded-xl shadow p-5">
+    <h2 class="font-semibold text-lg mb-4">Effectuer un paiement</h2>
+    <form class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium mb-1">Sélectionner l'enfant</label>
+        <select class="w-full border rounded-lg p-3">
+          <option>Jean Dupont</option>
+          <option>Marie Dupont</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Type de frais</label>
+        <select class="w-full border rounded-lg p-3">
+          <option>Inscription</option>
+          <option>Pension</option>
+          <option>Rattrapage</option>
+          <option>Activités</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Montant</label>
+        <input type="text" placeholder="Ex: 50 000 FCFA" class="w-full border rounded-lg p-3" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Mode de paiement</label>
+        <select class="w-full border rounded-lg p-3">
+          <option>MTN MoMo</option>
+          <option>Orange Money</option>
+          <option>Carte bancaire</option>
+          <option>Espèces</option>
+          <option>Virement bancaire</option>
+        </select>
+      </div>
+
+      <button type="button" class="bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition">Confirmer le paiement</button>
+    </form>
+  </section>
+
+  <!-- SECTION NOTES DES ENFANTS -->
+  <section class="bg-white rounded-xl shadow p-5">
+    <h2 class="font-semibold text-lg mb-4">Notes des enfants</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="px-4 py-2 text-left">Enfant</th>
+            <th class="px-4 py-2 text-left">Matière</th>
+            <th class="px-4 py-2 text-left">Note</th>
+            <th class="px-4 py-2 text-left">Observation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="px-4 py-2">Jean Dupont</td>
+            <td class="px-4 py-2">Mathématiques</td>
+            <td class="px-4 py-2">15/20</td>
+            <td class="px-4 py-2">Bien</td>
+          </tr>
+          <tr class="border-b bg-gray-50">
+            <td class="px-4 py-2">Jean Dupont</td>
+            <td class="px-4 py-2">Français</td>
+            <td class="px-4 py-2">14/20</td>
+            <td class="px-4 py-2">Bien</td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-4 py-2">Marie Dupont</td>
+            <td class="px-4 py-2">Mathématiques</td>
+            <td class="px-4 py-2">18/20</td>
+            <td class="px-4 py-2">Très bien</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION CONVOCATIONS / INVITATIONS -->
+  <section class="bg-white rounded-xl shadow p-5">
+    <h2 class="font-semibold text-lg mb-4">Convocations / Invitations</h2>
+    <ul class="space-y-2 text-sm">
+      <li class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+        Réunion parents – 10 janvier 2026
+        <a href="#" class="text-green-600 hover:underline">Voir / Télécharger</a>
+      </li>
+      <li class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+        Invitation à la fête de fin d'année
+        <a href="#" class="text-green-600 hover:underline">Voir / Télécharger</a>
+      </li>
+    </ul>
+  </section>
+
+</main>
+<!-- FOOTER -->
+<footer class="bg-white shadow-inner mt-8 py-4 text-center text-sm text-gray-500">
+  © 2026 SCOLARPAY – Tous droits réservés
+</footer>
+
+</body>
+</html>

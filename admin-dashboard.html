@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>SCOLARPAY | Dashboard Administrateur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+<!-- HEADER -->
+<header class="bg-white shadow sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-lg md:text-xl font-bold text-green-600">SCOLARPAY</h1>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="admin-dashboard.html" class="text-green-600 font-semibold">Dashboard</a>
+      <a href="#gestion-utilisateurs" class="hover:text-green-600">Gestion utilisateurs</a>
+      <a href="#gestion-frais" class="hover:text-green-600">Gestion frais</a>
+      <a href="#statistiques" class="hover:text-green-600">Statistiques</a>
+      <a href="index.html" class="hover:text-green-600">Déconnexion</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 py-8 flex-grow space-y-8">
+
+  <!-- STATISTIQUES RAPIDES -->
+  <section id="statistiques" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="bg-white rounded-xl shadow p-4 text-center">
+      <h3 class="text-lg font-semibold">Nombre d'élèves</h3>
+      <p class="text-2xl font-bold text-green-600">120</p>
+    </div>
+    <div class="bg-white rounded-xl shadow p-4 text-center">
+      <h3 class="text-lg font-semibold">Paiements reçus</h3>
+      <p class="text-2xl font-bold text-green-600">80</p>
+    </div>
+    <div class="bg-white rounded-xl shadow p-4 text-center">
+      <h3 class="text-lg font-semibold">Paiements en attente</h3>
+      <p class="text-2xl font-bold text-red-600">40</p>
+    </div>
+  </section>
+
+  <!-- GESTION UTILISATEURS -->
+  <section id="gestion-utilisateurs" class="bg-white rounded-xl shadow p-6">
+    <h2 class="text-2xl font-bold text-green-600 mb-4">Gestion des utilisateurs</h2>
+    <button class="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-green-700 transition-all duration-200 mb-4">Ajouter un utilisateur</button>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="px-4 py-2 text-left">Nom</th>
+            <th class="px-4 py-2 text-left">Rôle</th>
+            <th class="px-4 py-2 text-left">Email</th>
+            <th class="px-4 py-2 text-left">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="px-4 py-2">Jean Dupont</td>
+            <td class="px-4 py-2">Parent</td>
+            <td class="px-4 py-2">jean@example.com</td>
+            <td class="px-4 py-2 space-x-2">
+              <button class="bg-blue-600 text-white py-1 px-3 rounded-lg hover:bg-blue-700 transition-all duration-200">Modifier</button>
+              <button class="bg-red-600 text-white py-1 px-3 rounded-lg hover:bg-red-700 transition-all duration-200">Supprimer</button>
+            </td>
+          </tr>
+          <tr class="border-b bg-gray-50">
+            <td class="px-4 py-2">Marie Martin</td>
+            <td class="px-4 py-2">Comptable</td>
+            <td class="px-4 py-2">marie@example.com</td>
+            <td class="px-4 py-2 space-x-2">
+              <button class="bg-blue-600 text-white py-1 px-3 rounded-lg hover:bg-blue-700 transition-all duration-200">Modifier</button>
+              <button class="bg-red-600 text-white py-1 px-3 rounded-lg hover:bg-red-700 transition-all duration-200">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- GESTION FRAIS -->
+  <section id="gestion-frais" class="bg-white rounded-xl shadow p-6">
+    <h2 class="text-2xl font-bold text-green-600 mb-4">Gestion des frais scolaires</h2>
+    <button class="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-green-700 transition-all duration-200 mb-4">Ajouter un type de frais</button>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="px-4 py-2 text-left">Libellé</th>
+            <th class="px-4 py-2 text-left">Montant</th>
+            <th class="px-4 py-2 text-left">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="px-4 py-2">Inscription</td>
+            <td class="px-4 py-2">50 000 FCFA</td>
+            <td class="px-4 py-2 space-x-2">
+              <button class="bg-blue-600 text-white py-1 px-3 rounded-lg hover:bg-blue-700 transition-all duration-200">Modifier</button>
+              <button class="bg-red-600 text-white py-1 px-3 rounded-lg hover:bg-red-700 transition-all duration-200">Supprimer</button>
+            </td>
+          </tr>
+          <tr class="border-b bg-gray-50">
+            <td class="px-4 py-2">Rattrapage de cours</td>
+            <td class="px-4 py-2">25 000 FCFA</td>
+            <td class="px-4 py-2 space-x-2">
+              <button class="bg-blue-600 text-white py-1 px-3 rounded-lg hover:bg-blue-700 transition-all duration-200">Modifier</button>
+              <button class="bg-red-600 text-white py-1 px-3 rounded-lg hover:bg-red-700 transition-all duration-200">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-white shadow-inner py-4 text-center text-sm text-gray-500">
+  © 2026 SCOLARPAY – Tous droits réservés
+</footer>
+
+</body>
+</html>

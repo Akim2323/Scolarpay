@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>SCOLARPAY | Connexion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-green-600 to-green-800 min-h-screen flex items-center justify-center px-4">
+
+<!-- CONTENEUR -->
+<div class="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 relative">
+
+  <!-- RETOUR ACCUEIL -->
+  <a href="index.html" class="absolute top-4 left-4 text-sm text-green-600 hover:underline">← Accueil</a>
+
+  <!-- LOGO / TITRE -->
+  <div class="text-center mb-8">
+    <h1 class="text-3xl font-bold text-green-600">SCOLARPAY</h1>
+    <p class="text-sm text-gray-500 mt-1">Connexion à votre espace sécurisé</p>
+  </div>
+
+  <!-- FORMULAIRE -->
+  <form class="space-y-5">
+    <div>
+      <label class="block text-sm font-medium mb-1">Adresse email</label>
+      <input type="email" placeholder="exemple@mail.com" class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500" />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Mot de passe</label>
+      <input type="password" placeholder="••••••••" class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500" />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Type de compte</label>
+      <select class="w-full border rounded-lg p-3">
+        <option>Parent d'élève</option>
+        <option>Comptable</option>
+        <option>Administrateur</option>
+      </select>
+    </div>
+
+    <button type="button" onclick="connexion()" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition">Connexion</button>
+  </form>
+
+  <!-- OPTIONS -->
+  <div class="text-center mt-6 text-sm">
+    <a href="#" class="text-green-600 hover:underline">Mot de passe oublié ?</a>
+  </div>
+
+</div>
+
+<script>
+  function connexion() {
+    const role = document.querySelector('select').value;
+
+    if (role === "Parent d'élève") {
+      window.location.href = 'parent-dashboard.html';
+    } else if (role === 'Comptable') {
+      window.location.href = 'comptable-dashboard.html';
+    } else {
+      window.location.href = 'admin-dashboard.html';
+    }
+  }
+</script>
+
+</body>
+</html>
